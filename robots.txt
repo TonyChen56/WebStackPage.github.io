@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Allow: /en/
+Allow: /cn/
+Allow: /assets/css/
+Allow: /assets/js/
+Allow: /assets/images/
+Disallow: /.git/
+Disallow: /.cursor/
+
+Sitemap: https://webaitools.net/sitemap.xml 

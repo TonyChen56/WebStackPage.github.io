@@ -81,9 +81,137 @@
     <meta name="twitter:title" content="Web Development & AI Tools Directory - Professional Resources | WebAITools">
     <meta name="twitter:description" content="WebAITools Directory - Curated collection of high-quality web development tools, AI resources, SEO optimization solutions, and keyword research tools to help webmasters build and optimize websites efficiently.">
     <meta name="twitter:image" content="https://webaitools.net/assets/images/webstack_banner_cn.png">
+    
+    <!-- Structured Data Markup - WebSite -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "WebAITools - Web Development & AI Tools Directory",
+      "url": "https://webaitools.net/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://webaitools.net/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      },
+      "description": "WebAITools Directory - Curated collection of high-quality web development tools, AI resources, SEO optimization solutions, and keyword research tools to help webmasters build and optimize websites efficiently.",
+      "inLanguage": "en-US",
+      "publisher": {
+        "@type": "Organization",
+        "name": "WebAITools",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://webaitools.net/assets/images/logo@2x.png"
+        }
+      }
+    }
+    </script>
+    
+    <!-- Structured Data Markup - SiteNavigationElement -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "SiteNavigationElement",
+          "position": 1,
+          "name": "Requirement Collection",
+          "url": "https://webaitools.net/en/index.html#Requirement"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 2,
+          "name": "Keyword Research",
+          "url": "https://webaitools.net/en/index.html#Keywords"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 3,
+          "name": "Site Essentials",
+          "url": "https://webaitools.net/en/index.html#Essentials"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 4,
+          "name": "Competitor Research",
+          "url": "https://webaitools.net/en/index.html#Competitor"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 5,
+          "name": "Site Templates",
+          "url": "https://webaitools.net/en/index.html#Templates"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 6,
+          "name": "Navigation Templates",
+          "url": "https://webaitools.net/en/index.html#NavTemplates"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 7,
+          "name": "News",
+          "url": "https://webaitools.net/en/index.html#News"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 8,
+          "name": "AI Image Sites",
+          "url": "https://webaitools.net/en/index.html#AIImageSites"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 9,
+          "name": "SEO Friendly Sites",
+          "url": "https://webaitools.net/en/index.html#SEOFriendlySites"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 10,
+          "name": "About",
+          "url": "https://webaitools.net/en/about.html"
+        }
+      ]
+    }
+    </script>
 </head>
 
 <body class="page-body">
+    <!-- Add lazy loading script for images -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize image lazy loading
+            const observer = lozad('.lozad', {
+                loaded: function(el) {
+                    el.classList.add('loaded');
+                }
+            });
+            observer.observe();
+            
+            // Add security attributes to all external links
+            const externalLinks = document.querySelectorAll('a[href^="http"]:not([href*="webaitools.net"])');
+            externalLinks.forEach(function(link) {
+                // Add rel attributes
+                if (!link.hasAttribute('rel') || !link.getAttribute('rel').includes('noopener')) {
+                    const currentRel = link.getAttribute('rel') || '';
+                    link.setAttribute('rel', (currentRel + ' noopener noreferrer').trim());
+                }
+                
+                // Add security warning and tracking
+                link.addEventListener('click', function(e) {
+                    // Optional: Track external link clicks
+                    if (typeof gtag === 'function') {
+                        gtag('event', 'outbound_click', {
+                            'event_category': 'outbound',
+                            'event_label': this.href
+                        });
+                    }
+                });
+            });
+        });
+    </script>
     <!-- skin-white -->
     <div class="page-container">
         <div class="sidebar-menu toggle-others fixed">
@@ -215,8 +343,34 @@
 
             </nav>
 
+            <!-- Add H1 Main Title -->
+            <h1 class="site-main-title text-center" style="margin: 20px 0; font-size: 28px; color: #555; font-weight: 600;">
+                Web Development & AI Tools Directory - Professional Resources Platform
+            </h1>
+            
+            <!-- Add Feature Tags -->
+            <div class="feature-tags text-center" style="margin-bottom: 15px;">
+                <span class="label label-success" style="font-size: 14px; margin: 0 5px; padding: 5px 10px;">200+ Curated Tools</span>
+                <span class="label label-info" style="font-size: 14px; margin: 0 5px; padding: 5px 10px;">Weekly Updates</span>
+                <span class="label label-warning" style="font-size: 14px; margin: 0 5px; padding: 5px 10px;">SEO Optimized</span>
+                <span class="label label-danger" style="font-size: 14px; margin: 0 5px; padding: 5px 10px;">All-in-One Resources</span>
+            </div>
+            
+            <!-- Site Value Proposition -->
+            <div class="site-value-proposition text-center" style="margin-bottom: 30px; padding: 0 15px;">
+                <p style="font-size: 16px; color: #666; max-width: 900px; margin: 0 auto; line-height: 1.6;">
+                    WebAITools Directory provides webmasters, developers, and creators with carefully selected web development tools and AI resources, including requirement collection, keyword research, SEO optimization, website templates, and competitor analysis tools to help you build efficient websites and improve competitiveness.
+                </p>
+            </div>
+
             <!-- Requirement Collection Section - Collection of AI products and tools requirements -->
             <h4 class="text-gray"><i class="linecons-tag" style="margin-right: 7px;" id="Requirement"></i>Requirement Collection</h4>
+            <!-- Add Category Description -->
+            <div class="category-description" style="margin-bottom: 20px;">
+                <p style="color: #666; font-size: 15px; line-height: 1.5;">
+                    The first step in website development is understanding target user needs and market trends. The following tools can help you collect and analyze user requirements, industry hotspots, and AI application scenarios, providing data support and inspiration for your website planning. Mastering requirements is the key foundation for successful website building.
+                </p>
+            </div>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://www.toolify.ai/Best-AI-Tools-revenue', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://www.toolify.ai/Best-AI-Tools-revenue">
@@ -254,6 +408,12 @@
 
             <!-- Keyword Research Section - AI and tech industry news sites -->
             <h4 class="text-gray"><i class="linecons-tag" style="margin-right: 7px;" id="Keywords"></i>Keyword Research</h4>
+            <!-- Add Category Description -->
+            <div class="category-description" style="margin-bottom: 20px;">
+                <p style="color: #666; font-size: 15px; line-height: 1.5;">
+                    Keyword research is the core of SEO strategy, directly affecting your website's search visibility and traffic. The following tools can help you discover high-value keywords, analyze competition difficulty, understand search intent, and plan content strategies, building a solid SEO foundation for your website and enhancing your ability to acquire organic traffic.
+                </p>
+            </div>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://trends.google.com/trends/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://trends.google.com/trends/">
@@ -321,6 +481,12 @@
 
             <!-- Site Essentials Section - Domain registration and website basic services -->
             <h4 class="text-gray"><i class="linecons-tag" style="margin-right: 7px;" id="Essentials"></i>Site Essentials</h4>
+            <!-- Add Category Description -->
+            <div class="category-description" style="margin-bottom: 20px;">
+                <p style="color: #666; font-size: 15px; line-height: 1.5;">
+                    Several essential tools and resources need to be prepared before a website goes live. This category collects domain registration, hosting selection, SSL certificates, development environment setup, and other basic website building tools, providing a solid technical foundation for your website, ensuring normal operation and basic security, which is a necessary step in website construction.
+                </p>
+            </div>
             <!-- First row: Domain lookup tools -->
             <div class="row">
                 <div class="col-sm-3">
@@ -532,6 +698,12 @@
 
             <!-- Competitor Research Section - Website analysis and SEO tools -->
             <h4 class="text-gray"><i class="linecons-tag" style="margin-right: 7px;" id="Competitor"></i>Competitor Research</h4>
+            <!-- Add Category Description -->
+            <div class="category-description" style="margin-bottom: 20px;">
+                <p style="color: #666; font-size: 15px; line-height: 1.5;">
+                    Understanding your competitors is crucial for developing an effective website strategy. These tools help you analyze competitors' traffic sources, popular keywords, backlink profiles, and content strategies. By benchmarking against industry leaders, you can identify opportunities for differentiation and improvements to gain a competitive edge in your market.
+                </p>
+            </div>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://aitdk.com/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://aitdk.com/">
@@ -584,6 +756,12 @@
 
             <!-- Site Templates Section - Open source website templates and frameworks -->
             <h4 class="text-gray"><i class="linecons-tag" style="margin-right: 7px;" id="Templates"></i>Site Templates</h4>
+            <!-- Add Category Description -->
+            <div class="category-description" style="margin-bottom: 20px;">
+                <p style="color: #666; font-size: 15px; line-height: 1.5;">
+                    Website templates provide ready-made design frameworks that save development time and resources. This collection features open source templates, boilerplates, and starter kits for various project types including blogs, landing pages, SaaS applications, and portfolios. These templates offer responsive layouts, modern design elements, and integration with popular frameworks to accelerate your website development process.
+                </p>
+            </div>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://github.com/openRin/Rin', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://github.com/openRin/Rin">
@@ -856,6 +1034,12 @@
 
             <!-- Navigation Templates Section - Open source navigation sites and tool directories -->
             <h4 class="text-gray"><i class="linecons-tag" style="margin-right: 7px;" id="NavTemplates"></i>Navigation Templates</h4>
+            <!-- Add Category Description -->
+            <div class="category-description" style="margin-bottom: 20px;">
+                <p style="color: #666; font-size: 15px; line-height: 1.5;">
+                    Navigation templates are specialized website frameworks designed for creating resource directories and tool collections. This category includes open-source navigation site templates, directory builders, and curation platforms that allow you to quickly launch your own navigation website, resource gallery, or tool directory with organized categories and user-friendly interfaces.
+                </p>
+            </div>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://github.com/fre123-com/fre123-nav/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://github.com/fre123-com/fre123-nav/">
@@ -921,69 +1105,13 @@
             <br />
             <!--END Navigation Templates -->
 
-            <!-- News Section - AI and tech news sites -->
+            <!-- News Section - Business and startup resources -->
             <h4 class="text-gray"><i class="linecons-tag" style="margin-right: 7px;" id="News"></i>News</h4>
-            <div class="row">
-                <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://techcrunch.com/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://techcrunch.com/">
-                        <div class="xe-comment-entry">
-                            <a class="xe-user-img">
-                                <img src="https://techcrunch.com/wp-content/uploads/2015/02/cropped-cropped-favicon-gradient.png?w=32" class="lozad img-circle" width="40">
-                            </a>
-                            <div class="xe-comment">
-                                <a href="#" class="xe-user-name overflowClip_1">
-                                    <strong>TechCrunch</strong>
-                                </a>
-                                <p class="overflowClip_2">Tech innovation news site</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://www.producthunt.com/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://www.producthunt.com/">
-                        <div class="xe-comment-entry">
-                            <a class="xe-user-img">
-                                <img src="https://www.producthunt.com/favicon.ico" class="lozad img-circle" width="40">
-                            </a>
-                            <div class="xe-comment">
-                                <a href="#" class="xe-user-name overflowClip_1">
-                                    <strong>ProductHunt</strong>
-                                </a>
-                                <p class="overflowClip_2">New product launch platform</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://www.theaibeat.com/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://www.theaibeat.com/">
-                        <div class="xe-comment-entry">
-                            <a class="xe-user-img">
-                                <img src="https://www.google.com/s2/favicons?domain=theaibeat.com&sz=128" class="lozad img-circle" width="40">
-                            </a>
-                            <div class="xe-comment">
-                                <a href="#" class="xe-user-name overflowClip_1">
-                                    <strong>The AI Beat</strong>
-                                </a>
-                                <p class="overflowClip_2">Latest AI development trends</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://www.techradar.com/news/artificial-intelligence', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://www.techradar.com/news/artificial-intelligence">
-                        <div class="xe-comment-entry">
-                            <a class="xe-user-img">
-                                <img src="https://www.techradar.com/favicon.ico" class="lozad img-circle" width="40">
-                            </a>
-                            <div class="xe-comment">
-                                <a href="#" class="xe-user-name overflowClip_1">
-                                    <strong>TechRadar AI</strong>
-                                </a>
-                                <p class="overflowClip_2">AI technology news and reviews</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <!-- Add Category Description -->
+            <div class="category-description" style="margin-bottom: 20px;">
+                <p style="color: #666; font-size: 15px; line-height: 1.5;">
+                    Staying updated with industry news and trends is crucial for making informed decisions. This section includes resources for tech news, startup stories, business case studies, and entrepreneurial insights that provide valuable information about market developments, success stories, and emerging opportunities in the web development and AI industries.
+                </p>
             </div>
             <div class="row">
                 <div class="col-sm-3">
@@ -1052,6 +1180,12 @@
 
             <!-- AI Image Sites Section - AI Image Generation Tools -->
             <h4 class="text-gray"><i class="linecons-tag" style="margin-right: 7px;" id="AIImageSites"></i>AI Image Sites</h4>
+            <!-- Add Category Description -->
+            <div class="category-description" style="margin-bottom: 20px;">
+                <p style="color: #666; font-size: 15px; line-height: 1.5;">
+                    High-quality image resources are key elements for enhancing website visual appeal and professionalism. This category features selected free and paid premium image platforms, providing rich asset libraries to support your website design needs, including photos, illustrations, icons, and backgrounds, helping you create visually impressive website content.
+                </p>
+            </div>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://ghiblio.art/zh', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://ghiblio.art/zh">
@@ -1119,6 +1253,12 @@
 
             <!-- SEO Friendly Sites Section - Examples of SEO friendly websites -->
             <h4 class="text-gray"><i class="linecons-tag" style="margin-right: 7px;" id="SEOFriendlySites"></i>SEO Friendly Sites</h4>
+            <!-- Add Category Description -->
+            <div class="category-description" style="margin-bottom: 20px;">
+                <p style="color: #666; font-size: 15px; line-height: 1.5;">
+                    SEO optimization is a core strategy for improving website visibility and organic traffic. This collection includes website examples that excel in SEO, covering structural design, content organization, linking strategies, and technical optimization. These sites provide practical references and inspiration to help you build websites that better align with search engine algorithm preferences.
+                </p>
+            </div>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://astro-paper.pages.dev/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://astro-paper.pages.dev/">

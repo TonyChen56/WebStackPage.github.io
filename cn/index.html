@@ -81,9 +81,137 @@
     <meta name="twitter:title" content="Web建站与AI工具导航 - 专业站长建站资源集合 | WebAITools">
     <meta name="twitter:description" content="WebAITools导航 - 精选高质量Web建站工具、AI开发资源、SEO优化方案及关键词研究工具，助力站长高效建站和网站优化，定期更新前沿建站技术与资源。">
     <meta name="twitter:image" content="https://webaitools.net/assets/images/webstack_banner_cn.png">
+    
+    <!-- 结构化数据标记 - WebSite -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "WebAITools - Web建站与AI工具导航",
+      "url": "https://webaitools.net/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://webaitools.net/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      },
+      "description": "WebAITools导航 - 精选高质量Web建站工具、AI开发资源、SEO优化方案及关键词研究工具，助力站长高效建站和网站优化，定期更新前沿建站技术与资源。",
+      "inLanguage": "zh-CN",
+      "publisher": {
+        "@type": "Organization",
+        "name": "WebAITools",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://webaitools.net/assets/images/logo@2x.png"
+        }
+      }
+    }
+    </script>
+    
+    <!-- 结构化数据标记 - SiteNavigationElement -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "SiteNavigationElement",
+          "position": 1,
+          "name": "需求收集",
+          "url": "https://webaitools.net/cn/index.html#需求收集"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 2,
+          "name": "关键词调研",
+          "url": "https://webaitools.net/cn/index.html#关键词调研"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 3,
+          "name": "上站必备",
+          "url": "https://webaitools.net/cn/index.html#界面灵感"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 4,
+          "name": "竞品调研",
+          "url": "https://webaitools.net/cn/index.html#平面素材"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 5,
+          "name": "上站模板",
+          "url": "https://webaitools.net/cn/index.html#常用工具"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 6,
+          "name": "导航站模板",
+          "url": "https://webaitools.net/cn/index.html#导航站模板"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 7,
+          "name": "资讯部分",
+          "url": "https://webaitools.net/cn/index.html#资讯部分"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 8,
+          "name": "优秀图片站",
+          "url": "https://webaitools.net/cn/index.html#优秀图片站"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 9,
+          "name": "SEO友好网站",
+          "url": "https://webaitools.net/cn/index.html#SEO友好网站"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 10,
+          "name": "关于本站",
+          "url": "https://webaitools.net/cn/about.html"
+        }
+      ]
+    }
+    </script>
 </head>
 
 <body class="page-body">
+    <!-- 添加图片延迟加载脚本 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 图片延迟加载初始化
+            const observer = lozad('.lozad', {
+                loaded: function(el) {
+                    el.classList.add('loaded');
+                }
+            });
+            observer.observe();
+            
+            // 为所有外部链接添加安全属性
+            const externalLinks = document.querySelectorAll('a[href^="http"]:not([href*="webaitools.net"])');
+            externalLinks.forEach(function(link) {
+                // 添加rel属性
+                if (!link.hasAttribute('rel') || !link.getAttribute('rel').includes('noopener')) {
+                    const currentRel = link.getAttribute('rel') || '';
+                    link.setAttribute('rel', (currentRel + ' noopener noreferrer').trim());
+                }
+                
+                // 添加安全提示和跟踪
+                link.addEventListener('click', function(e) {
+                    // 可选: 跟踪外部链接点击
+                    if (typeof gtag === 'function') {
+                        gtag('event', 'outbound_click', {
+                            'event_category': 'outbound',
+                            'event_label': this.href
+                        });
+                    }
+                });
+            });
+        });
+    </script>
     <!-- skin-white -->
     <div class="page-container">
         <div class="sidebar-menu toggle-others fixed">
@@ -214,9 +342,35 @@
                 <!-- <a href="https://github.com/WebStackPage/WebStackPage.github.io" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a> -->
 
             </nav>
-
+            
+            <!-- 添加H1主标题 -->
+            <h1 class="site-main-title text-center" style="margin: 20px 0; font-size: 28px; color: #555; font-weight: 600;">
+                Web建站与AI工具导航 - 专业站长资源一站式平台
+            </h1>
+            
+            <!-- 添加特色标签 -->
+            <div class="feature-tags text-center" style="margin-bottom: 15px;">
+                <span class="label label-success" style="font-size: 14px; margin: 0 5px; padding: 5px 10px;">200+精选工具</span>
+                <span class="label label-info" style="font-size: 14px; margin: 0 5px; padding: 5px 10px;">每周更新</span>
+                <span class="label label-warning" style="font-size: 14px; margin: 0 5px; padding: 5px 10px;">专业SEO优化</span>
+                <span class="label label-danger" style="font-size: 14px; margin: 0 5px; padding: 5px 10px;">一站式建站资源</span>
+            </div>
+            
+            <!-- 网站主要价值描述 -->
+            <div class="site-value-proposition text-center" style="margin-bottom: 30px; padding: 0 15px;">
+                <p style="font-size: 16px; color: #666; max-width: 900px; margin: 0 auto; line-height: 1.6;">
+                    WebAITools导航为站长、开发者和创作者提供精选的Web建站工具与AI资源，包括需求收集、关键词调研、SEO优化、网站模板和竞品分析等专业工具，助您高效建站并提升网站竞争力。
+                </p>
+            </div>
+            
             <!-- 需求收集板块 - 收集AI产品和工具的需求信息 -->
             <h4 class="text-gray"><i class="linecons-tag" style="margin-right: 7px;" id="需求收集"></i>需求收集</h4>
+            <!-- 添加分类描述 -->
+            <div class="category-description" style="margin-bottom: 20px;">
+                <p style="color: #666; font-size: 15px; line-height: 1.5;">
+                    网站建设的第一步是了解目标用户需求和市场趋势。以下工具可帮助您收集和分析用户需求、行业热点和AI应用场景，为您的网站规划提供数据支持和灵感来源。掌握需求是建站成功的关键基础。
+                </p>
+            </div>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://www.toolify.ai/Best-AI-Tools-revenue', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://www.toolify.ai/Best-AI-Tools-revenue">
@@ -254,6 +408,12 @@
 
             <!-- 关键词调研板块 - AI和科技行业资讯网站 -->
             <h4 class="text-gray"><i class="linecons-tag" style="margin-right: 7px;" id="关键词调研"></i>关键词调研</h4>
+            <!-- 添加分类描述 -->
+            <div class="category-description" style="margin-bottom: 20px;">
+                <p style="color: #666; font-size: 15px; line-height: 1.5;">
+                    关键词研究是SEO策略的核心，直接影响您网站的搜索可见性与流量。以下工具可帮助您发现高价值关键词、分析竞争难度、了解搜索意图并规划内容策略，为您的网站打造坚实的SEO基础，提升自然流量获取能力。
+                </p>
+            </div>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://trends.google.com/trends/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://trends.google.com/trends/">
@@ -321,7 +481,12 @@
 
             <!-- 上站必备板块 - 域名注册和网站基础服务 -->
             <h4 class="text-gray"><i class="linecons-tag" style="margin-right: 7px;" id="界面灵感"></i>上站必备</h4>
-            <!-- 第一行：域名查询工具 -->
+            <!-- 添加分类描述 -->
+            <div class="category-description" style="margin-bottom: 20px;">
+                <p style="color: #666; font-size: 15px; line-height: 1.5;">
+                    网站上线前需要准备多种必备工具和资源。这个分类收集了域名注册、主机选择、SSL证书、开发环境搭建等建站基础工具，为您的网站提供稳固的技术基础，确保网站正常运行并具备基本的安全性能，是网站建设的必经之路。
+                </p>
+            </div>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://leandomainsearch.com/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://leandomainsearch.com/">
@@ -515,6 +680,12 @@
 
             <!-- 竞品调研板块 - 网站分析和SEO工具 -->
             <h4 class="text-gray"><i class="linecons-tag" style="margin-right: 7px;" id="平面素材"></i>竞品调研</h4>
+            <!-- 添加分类描述 -->
+            <div class="category-description" style="margin-bottom: 20px;">
+                <p style="color: #666; font-size: 15px; line-height: 1.5;">
+                    竞品分析是网站定位和规划的重要环节。此分类提供的工具可帮助您分析竞争对手的网站结构、内容策略、流量来源和用户体验等关键要素，从而发现市场空白点、学习成功经验并制定差异化策略，为您的网站建设提供战略指导。
+                </p>
+            </div>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://aitdk.com/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://aitdk.com/">
@@ -567,6 +738,12 @@
 
             <!-- 上站模板板块 - 开源网站模板和框架 -->
             <h4 class="text-gray"><i class="linecons-tag" style="margin-right: 7px;" id="常用工具"></i>上站模板</h4>
+            <!-- 添加分类描述 -->
+            <div class="category-description" style="margin-bottom: 20px;">
+                <p style="color: #666; font-size: 15px; line-height: 1.5;">
+                    精选的网站模板资源可以大幅缩短网站开发周期并确保专业品质。本分类包含各类网站模板资源，涵盖企业官网、博客、电商、作品集等多种类型，支持多种框架和CMS系统，让您快速搭建符合现代设计标准且对SEO友好的网站基础。
+                </p>
+            </div>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://github.com/openRin/Rin', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://github.com/openRin/Rin">
@@ -837,6 +1014,12 @@
 
             <!-- 导航站模板板块 - 开源导航站和工具目录 -->
             <h4 class="text-gray"><i class="linecons-tag" style="margin-right: 7px;" id="导航站模板"></i>导航站模板</h4>
+            <!-- 添加分类描述 -->
+            <div class="category-description" style="margin-bottom: 20px;">
+                <p style="color: #666; font-size: 15px; line-height: 1.5;">
+                    导航站是聚合资源和为用户提供便捷导航的重要网站类型。此分类收集了优质导航站模板资源，包括响应式设计、多样的布局选择和强大的分类功能，无论您是创建工具导航、资源导航还是行业门户，都能找到适合的解决方案，快速搭建专业的导航网站。
+                </p>
+            </div>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://github.com/fre123-com/fre123-nav/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://github.com/fre123-com/fre123-nav/">
@@ -951,6 +1134,12 @@
 
             <!-- 资讯部分板块 - AI和技术行业动态 -->
             <h4 class="text-gray"><i class="linecons-tag" style="margin-right: 7px;" id="资讯部分"></i>资讯部分</h4>
+            <!-- 添加分类描述 -->
+            <div class="category-description" style="margin-bottom: 20px;">
+                <p style="color: #666; font-size: 15px; line-height: 1.5;">
+                    保持对行业趋势和技术发展的关注是网站运营者的必备素养。本分类整合了Web技术、人工智能、SEO优化等领域的专业资讯平台，帮助您掌握最新动态、学习前沿技术，为网站持续优化提供知识支持，让您的网站始终走在行业前列。
+                </p>
+            </div>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://liberating-doll-b8a.notion.site/Reddit-1a8e8aed91b18021839ecba8b74e530b', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://liberating-doll-b8a.notion.site/Reddit-1a8e8aed91b18021839ecba8b74e530b">
@@ -1065,6 +1254,12 @@
 
             <!-- 优秀图片站板块 - AI图像生成工具 -->
             <h4 class="text-gray"><i class="linecons-tag" style="margin-right: 7px;" id="优秀图片站"></i>优秀图片站</h4>
+            <!-- 添加分类描述 -->
+            <div class="category-description" style="margin-bottom: 20px;">
+                <p style="color: #666; font-size: 15px; line-height: 1.5;">
+                    高质量的图片资源是提升网站视觉吸引力和专业度的关键元素。本分类精选了免费和付费的优质图片平台，提供丰富的素材库支持您的网站设计需求，包括照片、插画、图标和背景等多种类型，助您打造视觉上令人印象深刻的网站内容。
+                </p>
+            </div>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://ghiblio.art/zh', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://ghiblio.art/zh">
@@ -1132,6 +1327,12 @@
 
             <!-- SEO友好网站板块 - SEO友好的网站示例 -->
             <h4 class="text-gray"><i class="linecons-tag" style="margin-right: 7px;" id="SEO友好网站"></i>SEO友好网站</h4>
+            <!-- 添加分类描述 -->
+            <div class="category-description" style="margin-bottom: 20px;">
+                <p style="color: #666; font-size: 15px; line-height: 1.5;">
+                    SEO优化是提升网站可见性和自然流量的核心策略。本分类收集了在SEO方面表现卓越的网站范例，涵盖结构设计、内容组织、链接策略和技术优化等多个方面，为您提供实践参考和灵感，帮助您构建更符合搜索引擎算法偏好的网站。
+                </p>
+            </div>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://astro-paper.pages.dev/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://astro-paper.pages.dev/">
@@ -1277,6 +1478,49 @@
     <!-- JavaScripts initializations and stuff -->
     <script src="../assets/js/xenon-custom.js"></script>
     <script src="../assets/js/lozad.js"></script>
+    
+    <!-- 工具列表结构化数据 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "Toolify 榜单",
+            "applicationCategory": "分析工具",
+            "description": "AI工具排行榜和收入数据",
+            "url": "https://www.toolify.ai/Best-AI-Tools-revenue"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "AI导航站需求列表",
+            "applicationCategory": "需求分析工具",
+            "description": "AI工具需求和应用场景列表",
+            "url": "https://theresanaiforthat.com/requests"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "大搜罗",
+            "applicationCategory": "关键词工具",
+            "description": "免费的关键词挖掘工具",
+            "url": "https://www.5118.com/"
+          }
+        }
+      ]
+    }
+    </script>
 </body>
 
 </html>
